@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+  <div class="contact-page">
+    <header class="header">
+      <h1 class="logo">Yoga & Wellness Blog</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main class="content">
+      <h2>Contact Us</h2>
+      <p>We'd love to hear from you! Fill out the form below to get in touch with us.</p>
+      <form id="contactForm" class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Message</button>
+      </form>
+      <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+        <h3>Thank you for reaching out!</h3>
+        <p>We’ve received your message and will get back to you shortly.</p>
+      </div>
+    </main>
+  </div>
+  <script>
+    // JavaScript to handle the form submission
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent default form submission behavior
+      // Hide the form and show the thank you message
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('thankYouMessage').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
